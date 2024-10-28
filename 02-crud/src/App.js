@@ -1,11 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import CrudApi from "./components/CrudApi";
+import CrudApp from "./components/CrudApp";
+import './index.css';
 
 function App() {
   return (
-    <div>
-      <h1>Crud REACT</h1>
-    </div>
+    <>
+      <h1>Ejercicios con React</h1>
+      <CrudApi/>
+      <hr/>
+      <CrudApp/>
+      <hr/>
+    </>
   );
 }
 
