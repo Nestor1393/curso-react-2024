@@ -13,7 +13,7 @@ const SongForm = ({handleSearch}) => {
         setForm({
             ...form, [e.target.name]: e.target.value,
         })
-        console.log(form);
+        //console.log(form);
     };
 
     const handleSubmit = (e) => {
