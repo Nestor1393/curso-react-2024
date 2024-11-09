@@ -8,7 +8,7 @@ const SongDetails = ({search, lyric, bio}) => {
   //if(!lyric || !bio) return null;
 
   return (
-    <div>
+    <div className='grid-2-2'>
       {lyric?.error || lyric?.name === "AbortError" || lyric?.err? <Message msg={`Error: no existe la canción '<em>${search.song}</em>'`} bgColor={"#dc3545"} /> : <SongLyric title={search.song} lyrics={lyric?.lyrics}/>}
       {!bio?.artists || bio === null? <Message msg={`Error: no existe el interprete '<em>${search.artist}</em>'`} bgColor={"#dc3545"}/> : <SongArtist artist={bio.artists[0]}/>}
         

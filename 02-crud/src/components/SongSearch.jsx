@@ -46,11 +46,13 @@ const SongSearch = () => {
   return (
     <div>
       <h2>Song Search</h2>
-      {loading && <Loader/>}
-      <SongForm handleSearch={handleSearch}/>
-      {search && !loading && (
-        <SongDetails search={search} lyric={lyric} bio={bio}/>
-      )}
+      <article className="grid-1-2">
+        <SongForm handleSearch={handleSearch}/>
+        {loading && <Loader/>}
+        {search && !loading && (
+          <SongDetails search={search} lyric={lyric} bio={bio}/>
+        )}
+      </article> 
     </div>
   )
 }
