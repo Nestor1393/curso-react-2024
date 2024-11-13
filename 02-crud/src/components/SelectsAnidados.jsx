@@ -12,6 +12,7 @@ const SelectsAnidados = () => {
 
   return (
     <div>
+      <h2>México</h2>
       <SelectList title="estado" url={`https://api.copomex.com/query/get_estados?token=${TOKEN}`} handleChange={(e) => {setState(e.target.value)}}/>
       {state && 
         <SelectList title="municipios" url={`https://api.copomex.com/query/get_municipio_por_estado/${state}?token=${TOKEN}`} handleChange={(e) => {setTown(e.target.value)}}/>
