@@ -1,0 +1,1 @@
+export const Contacto = () => <h1>Contacto nes</h1>
