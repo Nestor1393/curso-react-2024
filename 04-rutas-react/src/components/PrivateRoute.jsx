@@ -12,9 +12,8 @@ import { Redirect, Route } from 'react-router-dom/cjs/react-router-dom.min'
 
   let auth;
   
-  auth = true;
   auth = null;
-
+  auth = true;
 
   const PrivateRoute = ({component:Component, ...rest}) => {
     return <Route {...rest} >{auth? <Component/> : <Redirect to='/login'/>}</Route>;

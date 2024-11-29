@@ -12,13 +12,29 @@ import ReactTopics from '../pages/ReactTopics'
 import Login from '../pages/Login'
 import Dashboard from '../pages/Dashboard'
 import PrivateRoute from './PrivateRoute'
+import { HashRouter, Link } from 'react-router-dom/cjs/react-router-dom.min'
 
 const ConceptosBasicos = () => {
   return (
     
     <div>
+      <h2>Hash Router</h2>
+      <HashRouter>
+        <nav>
+          <Link to="/">Home</Link>
+          <Link to="/acerca">Acerca</Link>
+          <Link to="/contacto">Contacto</Link>
+        </nav>
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route exact path='/acerca' component={Acerca} />
+          <Route exact path='/contacto' component={Contacto} />
+          <Route path='*' component={Error404} />
+        </Switch>
+
+      </HashRouter>
+      <hr/>
       <h2>Conceptos Básicos</h2>
-      
       <Router>
         <MenuConceptos/>
         <Switch>
