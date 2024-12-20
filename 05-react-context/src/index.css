@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.my-page {
+  margin: 2rem auto;
+  padding: 1rem;
+  width: 70%;
+  background-color: #ccc;
+}
+
+.dark{
+  background-color: #fff;
+  filter: invert(1);
+}
+
+.my-page.dark2 {
+  background-color: #000; /* Fondo oscuro invertido */
+}
+
+
+.buttonEx {
+  border-radius: 2rem;
+  background-color: powderblue;
+  box-shadow: 0px 3px 7px 0px cornflowerblue;
+  /*box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2); */
+  padding: 0.02px 1rem ;
+  border: 0.3rem rgb(4, 4, 107);
+  width: fit-content;
+}
+
+.buttonEx:hover {
+  cursor: pointer;
+  background-color: rgb(209, 199, 60);
+  color: #fff;
+  box-shadow: 0px 3px 7px 0px rgb(236, 117, 19);
+
+}
+
