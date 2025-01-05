@@ -10,7 +10,8 @@ export const shoppingInitialState = {
         {id: 5, name: "Producto 5", price: 500},
         {id: 6, name: "Producto 6", price: 600},
     ],
-    cart: []
+    cart: [],
+    totalAmount: 0,
 }
 
 export function shoppingReducer(state, action){
@@ -52,11 +53,20 @@ export function shoppingReducer(state, action){
             return {...state}
         }
         case TYPES.REMOVE_ALL_FROM_CART: {
-            
+
             state.cart = state.cart.filter(product => product.id !== action.payload);
             return {...state}
         }
         case TYPES.CLEAR_CART: return shoppingInitialState
-        default: return state
+
+        case TYPES.SHOW_TOTAL_AMOUNT: {
+             state.totalAmount = 0;
+             state.cart.map((product) => {
+               state.totalAmount += (product.price * product.quantity)
+             })
+
+             return {...state}
+        }
+        default: return {...state}
     }
 }
